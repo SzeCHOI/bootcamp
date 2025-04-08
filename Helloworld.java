@@ -14,6 +14,9 @@ public class Helloworld {
     System.out.println(x);
 
     System.out.println("Welcome to bootcamp!!!");
+    System.out.println("Lunch Menu");
+    System.out.println("\"Fried Rice\"");
+    System.out.println("Drink \n   Coka Cola");
 
   }
 }

@@ -35,9 +35,17 @@ public class DemoDouble {
     int score2 = 82;
     // calculate the average score
 
-    double score = (score1 + score2) / 2.0; // divided by double
+    double score = (score1 + score2) / 2; // divided by double or 2.0
     // ! understand why 76.0 but not 76.5
     System.out.println(score);
+
+    // divided by zero
+    // double r3 = 10 / 0;
+    // System.out.println(r3);
+
+    double r4 = 0 / 10;
+    System.out.println(r4);
+
 
   }
   

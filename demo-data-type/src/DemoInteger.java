@@ -24,7 +24,7 @@ public class DemoInteger {
         //1. y+ 2 -> 202
         //2. Assign 202 into y.
         y = y + 2;
-        System.out.print(y); //202
+        System.out.println(y); //202
 
         //- *
         // Define variable b, store 99
@@ -35,7 +35,7 @@ public class DemoInteger {
 
         int b = 99;
         int q = b - 200;
-        System.out.println(q);
+        System.out.println(q); //-101
         q = q * 10;
         System.out.println(q);
 

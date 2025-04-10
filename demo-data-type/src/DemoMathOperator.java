@@ -64,6 +64,21 @@ public class DemoMathOperator {
 
     // Find Min. number
     // 40, 32, -19
+    int num4 = 40;
+    int num5 = 32;
+    int num6 = -19;
+    int min = 0;
+    if (num4 < num5) {
+      min = num4;
+    } else {min = num5;
+    }
+    if (min < num6) {
+      System.out.println("Min is " + min);
+    } else { 
+      min = num6;
+    } System.out.println("Min is " + min);
+    
+
 
 
 

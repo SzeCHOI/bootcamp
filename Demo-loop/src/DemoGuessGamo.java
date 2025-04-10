@@ -12,31 +12,32 @@ public class DemoGuessGamo {
     // User A: 67 (67-67) -> User B win.
 
     int bomb = 67; // random number
-    // loop
+    // whileloop
     // Scanner (Collect user input)
     // ! User A and B ? counter -> User A / B
     // Adjust the range of numbers
     // Prompt Question: "Please inupt a number: "
     // continue condition
- Scanner scanner = new Scanner(System.in);
+
     int input = -1;
     int min = 1;
     int max = 100;
-    int round = 0;
+    Scanner scanner = new Scanner(System.in);
+    int round = 1;
     char user = 'A';
     
-
     while (input != bomb) {
-      if (round % 2 == 1) {
-        user = 'B';
-      } else {
+      if (round % 3 == 1) {
         user = 'A';
+      } else if (round % 3 == 2) {
+        user = 'B';
+      } else if (round % 3 == 0) {
+        user = 'C';
       }
-     
-      System.out.println("User " + user + ", Please input a number between " + min + "-" +max);
+      System.out.println("User " + user + ", Please input a number between " + min + "-" + max);
       input = scanner.nextInt();
       // Validate input if it is valid
-      //Adjust the range of numbers
+      // Adjust the range of numbers
       if (input >= min && input <= max) { 
         // if (input < min || input > max) {
         // continue;}
@@ -46,19 +47,14 @@ public class DemoGuessGamo {
         min = input + 1;
       }
       round++;
-      }
-      
-      // User A, round 1, lose
-    if (round % 2 == 1) {
-      user = 'B';
-    }else {
-      user = 'A';
-    System.out.println("Game end. User " + user + " win.");
-    
-} 
-    
     }
+    }
+    System.out.println("Game end. User " + user + " lose.");
+    scanner.close();
+  } 
     
+}
+    // How about 3 users?
 
     //while (input != bomb) 
       // Prompt Question
@@ -82,8 +78,6 @@ public class DemoGuessGamo {
           //y = x;
         
 
-}
-}
 
 
 

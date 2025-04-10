@@ -68,16 +68,18 @@ public class DemoMathOperator {
     int num5 = 32;
     int num6 = -19;
     int min = 0;
+    
     if (num4 < num5) {
       min = num4;
     } else {min = num5;
     }
+
     if (min < num6) {
       System.out.println("Min is " + min);
     } else { 
       min = num6;
     } System.out.println("Min is " + min);
-    
+
 
 
 

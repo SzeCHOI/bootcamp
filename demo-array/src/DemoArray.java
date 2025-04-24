@@ -285,7 +285,7 @@ public class DemoArray {
       }
     }
 
-    String[] lasNames = new String[] { "Lau", "Wong", "Chan" };
+    String[] lastNames = new String[] { "Lau", "Wong", "Chan" };
     // 8 primitives + String
 
   }

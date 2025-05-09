@@ -140,7 +140,7 @@ public class DemoArray {
         min = salaries[i];
       }
     }
-    System.err.println("The least salary = $" + min);
+    System.out.println("The least salary = $" + min);
 
     // John, Steven, Eric
     String[] names = new String[3];

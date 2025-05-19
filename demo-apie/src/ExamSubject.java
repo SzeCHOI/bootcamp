@@ -13,11 +13,11 @@ public class ExamSubject {
   }
 
   public static ExamSubject ofMath() {
-    return new ExamSubject(Name.MATH);
+    return new ExamSubject(Name.MATH, ++EXAM_CODE);
   }
 
   public static ExamSubject ofHistory() {
-    return new ExamSubject(Name.HISTORY);
+    return new ExamSubject(Name.HISTORY, ++EXAM_CODE);
   }
 
   // Constructor
@@ -44,7 +44,7 @@ public class ExamSubject {
   // toString
 
   // getter, setter
-  public long getId(){
+  public long getId() {
     return this.id;
   }
 
@@ -55,6 +55,10 @@ public class ExamSubject {
   public String getName() {
     return this.name.name();
   }
+
+    public int getScore() {
+    return this.score;
+  }
   // equals(), toString, hasCode()
 
   public enum Name {
@@ -62,7 +66,12 @@ public class ExamSubject {
   }
 
   public static void main(String[] args) {
+    ExamSubject es1 = ExamSubject.ofEnglish();
+    System.out.println(es1.getName()); // "ENGLISH"
+    es1.setScore(80);
+    System.out.println(es1.getScore());
 
+    System.out.println(es1); // ExamSubject(id=1,name=ENGLISH,score=80)
   }
 
 }

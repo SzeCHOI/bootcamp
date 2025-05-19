@@ -10,14 +10,28 @@ public class Child {
     return this.candies;
   }
 
-  public void receive(Candy newCandy){
-    Candy[] newCandies = new Candy[this.candies.length +1];
+  // public void receive(Candy newCandy){
+  //   Candy[] newCandies = new Candy[this.candies.length +1];
+  //   for (int i = 0; i < this.candies.length; i++) {
+  //     newCandies[i] = this.candies[i];
+  //   }
+  //   newCandies[newCandies.length-1] = newCandy;
+  //   this.candies = newCandies;
+  // }
+
+  public boolean receive(Candy newCandy) {
+    if (newCandy == null) {
+      return false;
+    }
+    Candy[] newCandies = new Candy[this.candies.length + 1];
     for (int i = 0; i < this.candies.length; i++) {
       newCandies[i] = this.candies[i];
     }
-    newCandies[newCandies.length-1] = newCandy;
+    newCandies[newCandies.length - 1] = newCandy;
     this.candies = newCandies;
+    return true;
   }
+  
   // 20 Candy
   // Candy has colour (RED, PURPULE, YELLOW)
   // Teacher distributes candy to child (6 children)

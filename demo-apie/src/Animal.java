@@ -16,7 +16,7 @@ public class Animal { // More abstract -> Parent Class
   // }
 
   // method (can be inderited)
-  public String getName() {
+   public String getName() {
     return this.name;
   }
 
@@ -24,12 +24,12 @@ public class Animal { // More abstract -> Parent Class
     this.name = name;
   }
 
-  public Cat getCat() {
-    return this.cat;
-  }
+  // public Cat getCat() {
+  //   return this.cat;
+  // }
 
   public void sound() {
-    System.out.println("default sound...");
+    System.out.println("default sound ...");
   }
 
   public static void main(String[] args) {
@@ -39,7 +39,7 @@ public class Animal { // More abstract -> Parent Class
     System.out.println(a1.getName()); // Sally
 
     Cat c1 = new Cat("Peter", 20);
-    System.out.println(c1.getName());// Peter
+    System.out.println(c1.getName()); // Peter
     c1.setAge(18);
     System.out.println(c1.getAge()); // 18
 
@@ -55,5 +55,8 @@ public class Animal { // More abstract -> Parent Class
     // Animal a3 = new Animal("Vincent", c2);
     // a3.getCat().getName();
     // c2.getName();
+
+    
   }
+
 }

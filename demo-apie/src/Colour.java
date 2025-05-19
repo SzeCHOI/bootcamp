@@ -6,10 +6,10 @@ public enum Colour {
   BLUE(3, 'B');
 
   private int value;
-  private char chr;
+  private char ch;
 
-  private Colour(int value, char chr) {
+  private Colour(int value, char ch) {
     this.value = value;
-    this.chr = chr;
+    this.ch = ch;
   }
 }

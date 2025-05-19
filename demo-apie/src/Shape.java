@@ -5,7 +5,8 @@ public abstract class Shape {
   // 1. concrete class - can be "new"
   // 2. abstract class - cannot be "new"
 
-  // Abstract methoda
+  // Abstract Class:
+  // 1. May contain abstract method
 
   private String colour;
   // Child inherit attributes, instance metods

@@ -35,6 +35,20 @@ public class DemoHashMap {
 
         // Add a new Student "Steven" into class 3A by HashMap
         // No Loop
+      searchEngine.get("3A").add(new Student("Steven"));
+
+      // null -> cannot add
+      // Put Sally into class 3C if it exists.
+      // if 3C not exits, create the class.
+      if (searchEngine.containsKey("3C")){
+        searchEngine.get("3C").add(new Student("Sally"));
+      } else {
+        ArrayList<Student> class3C = new ArrayList<>();
+        class3C.add(new Student("Sally"));
+        searchEngine.put("3C", class3C);
+      }
+      searchEngine.get("3C").add(new Student("Sally"));
+      System.out.println(searchEngine.get("3C"));
 
     // ! search student by a String value
     ArrayList<Student> results = searchEngine.get("3B");

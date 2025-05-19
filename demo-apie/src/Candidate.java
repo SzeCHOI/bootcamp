@@ -1,9 +1,8 @@
 public class Candidate {
   private ExamSubject[] examSubjects;
 
-  public Candidate() {
-    this.examSubjects = new ExamSubject[] { ExamSubject.ofEnglish(),
-        ExamSubject.ofHistory(), ExamSubject.ofMath() };
+ public Candidate() {
+    this.examSubjects = new ExamSubject[3];
   }
 
   public void attendEnglishExam() {
@@ -11,64 +10,101 @@ public class Candidate {
   }
 
   public void attendMathExam() {
-    this.examSubjects[0] = ExamSubject.ofMath();
+    this.examSubjects[2] = ExamSubject.ofMath();
   }
 
   public void attendHistoryExam() {
     this.examSubjects[1] = ExamSubject.ofHistory();
   }
 
-  public ExamSubject getEnglishSubject(){
-return this.examSubjects[0];
+  public ExamSubject getEnglishSubject() {
+    return this.examSubjects[0];
   }
 
   public int getEnglishScore() {
     if (this.examSubjects[0] != null) {
       return this.examSubjects[0].getScore();
     } else {
-      System.out.println("The candidate didn't attend the exam");
+      System.out.println("The candidate didn't attend the English Exam.");
+      return -1;
+    }
+  }
+
+  public int getMathScore() {
+    if (this.examSubjects[2] != null) {
+      return this.examSubjects[2].getScore();
+    } else {
+      System.out.println("The candidate didn't attend the Math Exam.");
       return -1;
     }
   }
 
   public int getHistoryScore() {
-    return this.examSubjects[1].getScore();
+    if (this.examSubjects[1] != null) {
+      return this.examSubjects[1].getScore();
+    } else {
+      System.out.println("The candidate didn't attend the History Exam.");
+      return -1;
+    }
   }
 
-  public int getMathScore() {
-    return this.examSubjects[2].getScore();
-  }
-
-  public void setEnglish(int score){
+  public void setEnglish(int score) {
+    if (this.examSubjects[0] != null) {
       this.examSubjects[0].setScore(score);
-}
-
-  public void setHistory(int score){
-    this.examSubjects[1].setScore(score);
+    } else {
+      System.out.println("The candidate didn't attend the English Exam.");
+    }
   }
 
-  public void setMath(int score){
-    this.examSubjects[2].setScore(score);
+  public void setMath(int score) {
+    if (this.examSubjects[2] != null) {
+      this.examSubjects[2].setScore(score);
+    } else {
+      System.out.println("The candidate didn't attend the Math Exam.");
+    }
+  }
+
+  public void setHistory(int score) {
+    if (this.examSubjects[1] != null) {
+      this.examSubjects[1].setScore(score);
+    } else {
+      System.out.println("The candidate didn't attend the History Exam.");
+    }
   }
 
   public static void main(String[] args) {
     Candidate canA = new Candidate();
+
+    canA.attendEnglishExam();
     canA.setEnglish(80);
-    canA.setHistory(45);
+
+    canA.attendMathExam();
     canA.setMath(90);
 
+    canA.attendHistoryExam();
+    canA.setHistory(45);
+
     Candidate canB = new Candidate();
+
+    canB.attendEnglishExam();
     canB.setEnglish(100);
+
+    canB.attendMathExam();
     canB.setMath(90);
+
+    canB.attendHistoryExam();
     canB.setHistory(40);
 
     System.out.println(canA.getHistoryScore()); // 45
     System.out.println(canB.getHistoryScore()); // 40
 
-    System.out.println(canA.getEnglishSubject().equals(canB.getEnglishSubject())); // false
-    System.out.println(canA.getEnglishSubject().equals(canA.getEnglishSubject())); // true
+    System.out
+        .println(canA.getEnglishSubject().equals(canB.getEnglishSubject())); // false
 
+    System.out
+        .println(canA.getEnglishSubject().equals(canA.getEnglishSubject())); // true
     System.out.println(canA.getEnglishSubject().getId()); // 1
     System.out.println(canB.getEnglishSubject().getId()); // 4
+
   }
 }

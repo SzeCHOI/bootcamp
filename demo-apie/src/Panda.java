@@ -1,13 +1,10 @@
 public class Panda extends Animal {
   
-  private int age;
+  // private int age;
 
-  public Panda(String name, int age) {
+  public Panda(String name) {
     super(name);
-    this.age = age;
   }
 
-  public int getAge() {
-    return this.age;
-  }
+
 }

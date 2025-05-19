@@ -10,7 +10,7 @@ public class Zoo {
     this.animals[0] = new Cat("John", 2);
     this.animals[1] = new Dog("Peter");
     // this.cat = new Cat("John", 2)
-    this.animals[2] = new Panda("Vincent", 10);
+    this.animals[2] = new Panda("Vincent");
   }
 
   public Animal getDog() {

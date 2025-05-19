@@ -1,5 +1,3 @@
-import javax.swing.BoundedRangeModel;
-
 public class DemoPolymorphism {
   public static void main(String[] args) {
     // I -> Inheritence (extends)
@@ -48,7 +46,7 @@ public class DemoPolymorphism {
     acc2.getSavingAccount().credit(400.0);
     System.out.println(acc2.getSavingAccount().getBalance());
 
-    SubAccount subAcc1 = new SavingAccount();
+    SubAccount subAcc1 = SavingAccount.ofHKD();
     SubAccount subAcc2 = new CurrentAccount();
     subAcc1.credit(900.0);
     subAcc2.credit(100.0);
